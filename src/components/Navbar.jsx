@@ -12,7 +12,6 @@ const Navbar = () => {
               <img className="logo" src={Logo} alt="logo-mattelsa" />
             </Link>
           </li>
-          <li>Nav 1</li>
         </ul>
       </nav>
     </div>

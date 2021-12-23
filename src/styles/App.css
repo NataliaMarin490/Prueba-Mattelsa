@@ -6,8 +6,13 @@
   justify-content: space-between;
 }
 .mainPublic {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   height: 100%;
   overflow-y: scroll;
+  overflow-x: hidden;
+  background-color: rgb(233, 231, 231);
 }
 
 /* Navbar */
@@ -24,6 +29,21 @@
 .logo {
   height: 20px;
   width: 100px;
+}
+.btn-navbar {
+  width: 100%;
+  padding: 5px 20px 5px 20px;
+  border: 0px;
+  border-radius: 10px;
+  background-color: #7da4ec;
+  color: #0e1521;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: cursive;
+}
+.btn-navbar:hover {
+  cursor: pointer;
+  background-color: #447be0;
 }
 
 /* Footer */
@@ -46,13 +66,14 @@
   flex-direction: column;
   text-align: center;
   font-size: 40px;
-  border: 1px solid;
   padding: 15px;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   font-family: cursive;
   cursor: default;
   font-weight: bolder;
   margin-bottom: 50px;
+  width: 100%;
+  border: 3px solid black;
 }
 .div-index {
   display: flex;
@@ -61,31 +82,48 @@
   height: 100%;
   width: 100%;
   align-items: center;
-  background-image: url(../media/img-index.jpg);
+  background-color: rgb(228, 226, 226);
+  /* background-image: url(../media/img-index.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: cover; */
 }
 .btn-vehiculo {
   width: 100%;
   padding: 20px;
   margin: 10px;
-  border: 5px solid rgb(8, 8, 8);
+  border: 0px;
   border-radius: 10px;
-  background-color: transparent;
-  color: white;
+  background-color: #7da4ec;
+  color: #0e1521;
   font-size: 18px;
   font-weight: bold;
   font-family: cursive;
 }
 .btn-vehiculo:hover {
   cursor: pointer;
-  background-color: black;
+  background-color: #5488e9;
 }
-.grid-index{
-    display: flex;
-    flex-direction: column;
-    width: 20%;
+.btn-vehiculo1 {
+  width: 100%;
+  padding: 20px;
+  margin: 10px;
+  border: 0px;
+  border-radius: 10px;
+  background-color: #cbed64;
+  color: #0e1521;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: cursive;
+}
+.btn-vehiculo1:hover {
+  cursor: pointer;
+  background-color: #bcec2a;
+}
+.grid-index {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
 }
 
 /* Visitantes */
@@ -103,24 +141,33 @@
   flex-direction: column;
   align-items: center;
 }
+.form-ingreso {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.lista-ingreso {
+  padding: 10px;
+  border: 0px;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  margin-top: 5px;
+  width: 98%;
+}
 .input-visitantes {
   width: 90%;
-  padding: 15px;
+  padding: 10px;
   border: 0px;
   border-radius: 8px;
-  margin: 10px 0px 10px 0px;
+  margin: 5px 0px 5px 0px;
 }
 .input-visitantes:focus {
   border: 1px solid rgb(121, 120, 120);
 }
-.bienvenido {
-  font-size: 40px;
-  font-weight: 500;
-  font-family: cursive;
-  color: #222222;
-}
 .btn-visitantes1 {
-  padding: 15px;
+  padding: 10px;
   margin-top: 10px;
   width: 100%;
   background-color: rgb(49, 49, 49);
@@ -135,8 +182,8 @@
   background-color: #141414;
 }
 .logo-registro {
-  width: 200px;
-  height: 200px;
+  width: 180px;
+  height: 180px;
 }
 /* Vehiculos */
 .div-vehiculo1 {
@@ -144,22 +191,20 @@
 }
 
 /* Empleados */
+.mainContainer-empleados {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .logo-empleados {
   width: 100px;
   height: 100px;
+  margin: 30px;
 }
 .span-index {
   font-size: 20px;
   font-weight: bolder;
   color: rgb(54, 54, 54);
-}
-.mainContainer-empleados {
-  background-color: rgb(228, 227, 227);
-  display: flex;
-  height: 100%;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
 }
 .div-empleado {
   display: flex;
@@ -182,11 +227,11 @@
   border-radius: 10px;
 }
 .input-identificacion {
-  width: 100%;
+  width: 87%;
   padding: 15px;
   border: 0px;
   border-radius: 8px;
-  margin: 10px 0px 10px 0px;
+  margin: 10px 0px 5px 0px;
 }
 .input-identificacion:focus {
   border: 1px solid rgb(121, 120, 120);
@@ -198,14 +243,17 @@
 .input-empleados {
   display: flex;
   flex-direction: column;
-  width: 80%;
-  padding: 15px;
+  width: 100%;
+  padding: 10px;
   border: 0px;
   border-radius: 8px;
-  margin: 10px 0px 10px 0px;
+  margin: 5px 0px 5px 0px;
 }
 .grid-int {
+  display: flex;
+  flex-direction: column;
   padding: 10px;
+  align-items: center;
 }
 .btn-empleados1 {
   padding: 15px;
@@ -222,8 +270,64 @@
   cursor: pointer;
   background-color: #141414;
 }
-.form-empleados{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.form-empleados {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.span-vh {
+  font-size: 15px;
+  font-weight: 700;
+  font-family: cursive;
+  color: #0e1521;
+}
+.btn-info {
+  position: relative;
+
+  padding: 20px;
+  border: 0px;
+  border-radius: 30px;
+  background-color: #7da4ec;
+  color: #0e1521;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: cursive;
+}
+.btn-info:hover {
+  cursor: pointer;
+  background-color: #447be0;
+}
+.div-tabla {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.header {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  font-family: cursive;
+  font-size: 17px;
+  font-weight: 400;
+}
+.header1 {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  flex-direction: column;
+  font-size: 16px;
+  font-weight: 300;
+}
+.cont-identificacion {
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+}
+.top-empleados {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
 }

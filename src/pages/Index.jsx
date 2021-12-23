@@ -9,10 +9,10 @@ const Index = () => {
       </span>
       <div className="grid-index">
         <Link to="/empleados">
-          <button className="btn-vehiculo">Registrar Empleado</button>
+          <button className="btn-vehiculo"> Empleados</button>
         </Link>
         <Link to="/ingreso">
-          <button className="btn-vehiculo">Ingresar vehiculo</button>
+          <button className="btn-vehiculo1">Ingreso Vehículos</button>
         </Link>
       </div>
     </div>

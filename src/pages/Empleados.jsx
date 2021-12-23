@@ -1,28 +1,28 @@
 import React, { useState, useEffect, useRef } from "react";
 import empleados from "../media/empleados.png";
 
-const listaEmpleados = [
-  {
-    identificacion: 1001131543,
-    vehiculo: "carro",
-    modelo: 2014,
-    puertas: 4,
-    placa: "MMF406",
-  },
-  {
-    identificacion: 1152214528,
-    vehiculo: "moto",
-    cilindraje: 125,
-    tiempos: 4,
-    placa: "KHK16E",
-  },
-  {
-    identificacion: 43644508,
-    vehiculo: "bicicleta",
-    marca: "Giant",
-    color: "azul",
-  },
-];
+//  const listaEmpleados = [
+//   {
+//     identificacion: 1001131543,
+//     vehiculo: "carro",
+//     modelo: 2014,
+//     puertas: 4,
+//     placa: "MMF406",
+//   },
+//   {
+//     identificacion: 1152214528,
+//     vehiculo: "moto",
+//     cilindraje: 125,
+//     tiempos: 4,
+//     placa: "KHK16E",
+//   },
+//   {
+//     identificacion: 43644508,
+//     vehiculo: "bicicleta",
+//     marca: "Giant",
+//     color: "azul",
+//   },
+// ];
 
 const Empleados = () => {
   const [mostrarTabla, setMostrarTabla] = useState(true);

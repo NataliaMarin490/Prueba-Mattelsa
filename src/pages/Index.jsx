@@ -8,11 +8,11 @@ const Index = () => {
         Gestión y Administración Parqueadero <span>Mattelsa</span>
       </span>
       <div className="grid-index">
-        <Link to="/empleados">
+        <Link to="/ingresoEmpleados">
           <button className="btn-vehiculo"> Empleados</button>
         </Link>
         <Link to="/ingreso">
-          <button className="btn-vehiculo1">Ingreso Vehículos</button>
+          <button className="btn-vehiculo1">Ingreso Visitantes</button>
         </Link>
       </div>
     </div>

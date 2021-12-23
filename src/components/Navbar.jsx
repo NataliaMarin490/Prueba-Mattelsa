@@ -12,6 +12,13 @@ const Navbar = () => {
               <img className="logo" src={Logo} alt="logo-mattelsa" />
             </Link>
           </li>
+          <li>
+            <Link to="/empleados">
+              <button type="button" className="btn-navbar">
+                Registro Empleados
+              </button>
+            </Link>
+          </li>
         </ul>
       </nav>
     </div>

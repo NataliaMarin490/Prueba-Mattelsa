@@ -10,14 +10,15 @@ import registro from "../media/registro.png";
 const IngresoEmpleados = () => {
   const [inputValue, setInputValue] = useState("");
   const [resultado, setResultado] = useState([]);
-  const [datos, setDatos] = useState();
+  const [datos, setDatos] = useState([]);
   const [datosIng, setDatosIng] = useState([]);
   const [text, setText] = useState(false);
+  const [mes,setMes]=useState();
   const form = useRef(null);
 
   useEffect(() => {
     setDatos(JSON.parse(localStorage.getItem("user")));
-    //localStorage.setItem("userEm", JSON.stringify(lista));
+    //localStorage.setItem("userEm", [JSON.stringify(lista)]);
   }, []);
 
   const buscar = (e) => {
@@ -28,6 +29,7 @@ const IngresoEmpleados = () => {
       setText(false);
     }
     setResultado(datos.filter((i) => i.identificacion == inputValue));
+    setMes((datosIng.filter((i) => i.identificacion == inputValue).length))
   };
 
   const submitForm = (e) => {
@@ -91,6 +93,8 @@ const IngresoEmpleados = () => {
                   <br />
                   {i.vehiculo}
                   <br />
+                  <br/>
+                  <span>{`El usuario ${i.identificacion} ha ingresado ${mes} veces`}</span>
                 </div>
               );
             })

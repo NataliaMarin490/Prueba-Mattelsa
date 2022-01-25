@@ -11,6 +11,7 @@ const Moto = () => {
         placeholder="Cilindraje"
         required
         autoComplete="off"
+        min={0}
       />
       <input
         className="input-empleados"

@@ -4,10 +4,16 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div>
-        <span>Contactanos</span>
+        <h4 className="h4-footer">Contactanos</h4>
+        <span>(+57) 300 739 58 48</span><br />
+        <span>PBX</span><br />
+        <span>correo@gmail.com</span><br />
       </div>
       <div>
-        <span>Redes sociales</span>
+        <h4 className="h4-footer">Redes sociales</h4>
+        <span>Facebook</span><br />
+        <span>Instagram</span><br />
+        <span>Twitter</span><br />
       </div>
     </footer>
   );

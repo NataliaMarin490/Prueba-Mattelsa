@@ -1,28 +1,28 @@
 import React, { useState, useEffect, useRef } from "react";
 import empleados from "../media/empleados.png";
 
-//  const listaEmpleados = [
-//   {
-//     identificacion: 1001131543,
-//     vehiculo: "carro",
-//     modelo: 2014,
-//     puertas: 4,
-//     placa: "MMF406",
-//   },
-//   {
-//     identificacion: 1152214528,
-//     vehiculo: "moto",
-//     cilindraje: 125,
-//     tiempos: 4,
-//     placa: "KHK16E",
-//   },
-//   {
-//     identificacion: 43644508,
-//     vehiculo: "bicicleta",
-//     marca: "Giant",
-//     color: "azul",
-//   },
-// ];
+const listaEmpleados = [
+  {
+    identificacion: 1001131543,
+    vehiculo: "carro",
+    modelo: 2014,
+    puertas: 4,
+    placa: "MMF406",
+  },
+  {
+    identificacion: 1152214528,
+    vehiculo: "moto",
+    cilindraje: 125,
+    tiempos: 4,
+    placa: "KHK16E",
+  },
+  {
+    identificacion: 43644508,
+    vehiculo: "bicicleta",
+    marca: "Giant",
+    color: "azul",
+  },
+];
 
 const Empleados = () => {
   const [mostrarTabla, setMostrarTabla] = useState(true);
@@ -30,8 +30,10 @@ const Empleados = () => {
   const [datos, setDatos] = useState([]);
 
   useEffect(() => {
+    if (!localStorage.user) {
+      localStorage.setItem("user", JSON.stringify(listaEmpleados));
+    }
     setDatos(JSON.parse(localStorage.getItem("user")));
-    //localStorage.setItem("user",JSON.stringify(listaEmpleados));
   }, []);
 
   useEffect(() => {
@@ -159,7 +161,7 @@ const Formulario = ({ datosEmpleados, setMostrarTabla, setDatos }) => {
             className="input-identificacion"
             type="number"
             name="identificacion"
-            placeholder="Identificación o Placa"
+            placeholder="Identificación"
             required
             autoComplete="off"
           />
@@ -191,6 +193,7 @@ const Formulario = ({ datosEmpleados, setMostrarTabla, setDatos }) => {
                   placeholder="Cilindraje"
                   required
                   autoComplete="off"
+                  min={0}
                 />
                 <input
                   className="input-empleados"

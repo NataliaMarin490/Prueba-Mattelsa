@@ -43,6 +43,7 @@ const Empleados = () => {
       setTextoBoton("Mostrar Usuarios");
     }
   }, [mostrarTabla]);
+
   return (
     <div className="mainContainer-empleados">
       <div className="top-empleados">
@@ -72,6 +73,7 @@ const Empleados = () => {
 };
 
 const Tabla = ({ datosEmpleados }) => {
+  
   useEffect(() => {
     console.log("listado: ", datosEmpleados);
   }, [datosEmpleados]);

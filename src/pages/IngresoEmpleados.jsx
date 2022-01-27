@@ -13,7 +13,7 @@ const IngresoEmpleados = () => {
   const [datos, setDatos] = useState([]);
   const [datosIng, setDatosIng] = useState([]);
   const [text, setText] = useState(false);
-  const [mes,setMes]=useState();
+  const [mes, setMes] = useState();
   const form = useRef(null);
 
   useEffect(() => {
@@ -29,7 +29,7 @@ const IngresoEmpleados = () => {
       setText(false);
     }
     setResultado(datos.filter((i) => i.identificacion == inputValue));
-    setMes((datosIng.filter((i) => i.identificacion == inputValue).length))
+    setMes(datosIng.filter((i) => i.identificacion == inputValue).length);
   };
 
   const submitForm = (e) => {
@@ -39,8 +39,8 @@ const IngresoEmpleados = () => {
     fd.forEach((value, key) => {
       nuevo[key] = value;
     });
-    setDatosIng([...datosIng,nuevo]);
-    localStorage.setItem("userEm", JSON.stringify([...datosIng,nuevo]));
+    setDatosIng([...datosIng, nuevo]);
+    localStorage.setItem("userEm", JSON.stringify([...datosIng, nuevo]));
   };
 
   return (
@@ -88,13 +88,10 @@ const IngresoEmpleados = () => {
               return (
                 <div>
                   <span className="label-busqueda">Usuario Encontrado:</span>
-                  <br />
-                  {i.identificacion}
-                  <br />
-                  {i.vehiculo}
-                  <br />
-                  <br/>
-                  <span>{`El usuario ${i.identificacion} ha ingresado ${mes} veces`}</span>
+                  <p>Identificación: {i.identificacion}</p>
+                  <p>Vehículo: {i.vehiculo}</p>
+                  <p>La placa es: {i.placa}</p>
+                  <span>{`El usuario con cédula ${i.identificacion} ha ingresado ${mes} veces`}</span>
                 </div>
               );
             })

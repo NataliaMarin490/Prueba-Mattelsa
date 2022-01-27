@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div>
-        <h4 className="h4-footer">Contactanos</h4>
+        <h4 className="h4-footer">Contáctanos</h4>
         <span>(+57) 300 739 58 48</span><br />
         <span>PBX</span><br />
         <span>correo@gmail.com</span><br />
